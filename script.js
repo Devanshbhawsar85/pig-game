@@ -16,6 +16,7 @@ const btnRoll = document.querySelector('.btn--roll');
 let scores, currentScore, activePlayer, playing;
 
 // Starting conditions
+//part 1
 const init = function () {
   scores = [0, 0];
   currentScore = 0;
@@ -42,7 +43,7 @@ const switchPlayer = function () {
   player0El.classList.toggle('player--active');
   player1El.classList.toggle('player--active');
 };
-
+// part 2
 // Rolling dice functionality
 btnRoll.addEventListener('click', function () {
   if (playing) {
@@ -76,6 +77,7 @@ btnHold.addEventListener('click', function () {
       scores[activePlayer];
 
     // 2. Check if player's score is >= 100
+    // also it will be automatically updted
     if (scores[activePlayer] >= 100) {
       // Finish the game
       playing = false;
